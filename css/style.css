@@ -1,0 +1,215 @@
+* 
+{ 
+    margin: 0; 
+    padding: 0;
+}
+
+header, 
+main,
+section,  
+nav, 
+div, 
+aside,
+footer
+{
+    display: block;
+}
+
+header{
+    width: 100%;
+    height: 55px;
+    background-color: white;
+}
+
+.logo{
+    position: relative;
+    display: flex;
+    margin-left: 110px;
+    margin-top: 5px;
+    font-size: 30px;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+}
+
+/* .search {
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+.searchTerm {
+    width: 100%;
+    border: 1px solid #000000;
+    border-right: none;
+    padding: 5px;
+    height: 20px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+    font-family: 'Roboto', sans-serif;
+}
+.searchTerm:focus{
+    color: #000000;
+}
+.searchButton {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #000000;
+    background: #FFFFFF;
+    text-align: center;
+    color: #444444;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+.searchContainer{
+    width: 500px;
+    position: absolute;
+    top: 30px;
+    right: 390px;
+    transform: translate(-50%, -50%);
+} */
+  
+.profile {
+    display: block;
+    position: absolute;
+    background: url("../images/userPic.png") no-repeat; 
+    height: 46px;
+    width: 50px;
+    right: 110px;
+    top: 7px;
+}
+
+#wrapper{
+    width: calc( 100% - 220px) ;
+    height: 100vh;
+    margin: 0 auto;
+    background-color: white;
+}
+
+#wrapper > h1 {
+    position: relative;
+    display:inline-block;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 30px;
+    font-size: 32px;
+    color:  #454F63;
+}
+
+#wrapper > .filterIcon {
+    display: block;
+    position: absolute;
+    background: url("../images/filter.png") no-repeat; 
+    height: 25px;
+    width: 25px;
+    right: 30px;
+    top: 97px;
+
+}
+#wrapper > button {
+    position: absolute;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    background-color: #3273DC;
+    right: 110px;
+    top: 100px;
+    border-radius: 10px;
+    padding: 5px;
+
+}
+#wrapper > main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+.card {
+    width: 250px;
+    height: 430px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-right: 60px;
+    font-family: 'Roboto' , sans-serif;
+}
+img{
+    width: 250px;
+    height: 160px;
+}
+ 
+.card:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.cardContainer{
+    padding: 2px 16px;
+}
+.author{
+    margin-top: 20px;
+    padding-top: 50px;
+    padding-left: 0px;
+    border-top: 1px solid black;
+}
+.tripDetails{
+    color: #FFFFFF;
+}
+
+
+footer{
+    width: 100%;
+    height: 66px;
+
+    background-color: #DEE2EC;
+}
+.footerSecond{
+    position: fixed;
+    bottom: 0;
+}
+
+
+
+
+@media (max-width: 580px) {
+
+footer, #wrapper > button, .cardContainer > p, .author{
+    display: none;
+} 
+
+.logo{
+    margin-left: 12px;
+}
+
+.profile{
+    float: right;
+    margin-right: -90px;
+}
+    
+#wrapper{
+    margin: 0 auto;
+    width: 300px;
+}
+
+#wrapper h1{
+    margin-left: -75px;
+}
+
+img{
+    width: 300px;
+    height: 140px;
+}
+
+.card {
+    height: 125px;
+}
+
+.cardContainer > h4{
+    color: #FFFFFF;
+    margin-top: -50px;
+}
+
+.tripDetails{
+    color:#FFFFFF;
+}
+}
