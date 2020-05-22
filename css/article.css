@@ -1,8 +1,18 @@
+body {
+    font-family: 'Open sans', sans-serif;
+}
+header {
+    background: url('../images/sdeBoker.jpg') 50%/cover no-repeat;
+    height: 300px;
+    position: relative;
+}
 header h2 {
-    color: #828896;
+    color: #EEE;
+    font-weight: 200;
 }
 header h1 {
-    color: #454F63;
+    color: #EEE;
+    font-weight: 700;
 }
 .user-image img{
     max-height: 30px;
@@ -12,12 +22,17 @@ header h1 {
     margin: 2px;
 }
 
-.wrapper {
-    padding: .5rem 3rem;
+#wrapper {
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    background: #FFF;
+    position: relative;
+    top: -100px;
+    box-shadow: 1px 1px 3px 0px #AAA;
 }
 
 .navbar, .breadcrumbs {
-    padding: .5rem 3rem;
+    padding: .5rem 1rem;
 }
 
 .destination-image {
@@ -25,10 +40,17 @@ header h1 {
     background: 50%/cover no-repeat;
 }
 
-.wrapper > section > div{
+#wrapper > section > nav {
+    position: sticky;
+    background: #FFF;
+    top: 0;
+    padding: 10px;
+    z-index: 10;
+}
+#wrapper > section > div{
     margin: 10px 0;
 }
-.wrapper > section > section:nth-child(2) > div {
+#wrapper > section > section:nth-child(2) > div {
     justify-content: space-evenly;
 }
 
@@ -37,18 +59,63 @@ header h1 {
 .btn-light {
     background-color: #E6E6E6;
 }
-body .btn {
-    font-weight: 100;
-}
-.wrapper > section:nth-child(2) {
+#wrapper > section:nth-child(2) {
     margin: 50px 0 20px;
 }
 
-#articleData {
-    display: inline;
-    max-width: 100%;
+#articleData > section{ 
+    margin: 20px 0;
 }
 
-#participants span, #participants i {
-    font-size: 20px;
+
+#articleData > section { 
+    border-radius: 4px;
 }
+
+#articleData ul{
+    list-style: none;
+    padding: 0;
+}
+#articleData .not-include li {
+    background: url('../icons/x.svg') 0/30px no-repeat;
+}
+#articleData .includes li {
+    background: url('../icons/check.svg') 0/30px no-repeat;
+}
+
+#articleData ul li {
+    padding-left: 40px;
+}
+#details > section > section {
+    margin: 15px 0px;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    #wrapper > section > nav {
+        display: none
+    }
+    #description > a {
+        display: none;
+    }
+}
+
+@media (max-width: 992px) {
+    #articleData > section > h3 {
+        font-size: 20px;
+        font-weight: bold;
+        display: none
+    }
+    #wrapper {
+        box-shadow: none;
+    }
+    
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}
