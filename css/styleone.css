@@ -34,12 +34,9 @@ header{
 
 .profile {
     display: block;
-    position: absolute;
-    background: url("../images/userPic.png") no-repeat; 
+    background: url("../images/userPic.png") 50%/contain no-repeat; 
     height: 46px;
     width: 50px;
-    right: 20px;
-    top: 7px;
 }
 
 #wrapper{
@@ -101,7 +98,6 @@ nav a:hover{
     color: black;
 }
 .navbar-toggle {
-    position: absolute;
     top: 75px;
     right: 20px;
     cursor: pointer; 
@@ -124,7 +120,7 @@ nav a:hover{
 
 
 #pageTitle {
-    position: absolute;
+    /* position: absolute; */
     display: block;
     margin-left: 30px;
     font-family: 'Roboto', sans-serif;
@@ -133,13 +129,13 @@ nav a:hover{
 }
 
 #wrapper > main {
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    height: 100vh;    
+    height: 100vh;     */
 }
 
-
+/* 
 
 .card {
     width: 300px;
@@ -151,11 +147,11 @@ nav a:hover{
     margin-right: 30px;
     margin-left: 30px;
     font-family: 'Roboto' , sans-serif;
-}
-img{
+} */
+/* img{
     width: 300px;
     height: 160px;
-}
+} */
  
 .card:hover{
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -222,4 +218,18 @@ footer{
     }
 
 }
-
+/* Mobile */
+@media (max-width: 700px) { 
+    body .card-body {
+        display: none;
+    }
+    body .card-img-overlay {
+        color: #FFF;
+    }
+}
+/* Desktop */
+@media (min-width: 700px) {
+    body .card-img-overlay {
+        display: none;
+    }
+}
