@@ -14,6 +14,11 @@ header h1 {
     color: #EEE;
     font-weight: 700;
 }
+header button {
+    position: absolute;
+    top: 100px;
+    left: calc(50% - 76px);
+}
 .user-image img{
     max-height: 30px;
     width: auto;
@@ -104,6 +109,9 @@ header h1 {
     #description > a {
         display: none;
     }
+    .includes .custom-checkbox, .not-includes .custom-checkbox {
+        display: none;
+    }
 }
 
 @media (max-width: 992px) {
@@ -114,6 +122,9 @@ header h1 {
     }
     #wrapper {
         box-shadow: none;
+    }
+    .includes select, .not-includes select {
+        display: none;
     }
     
 }
