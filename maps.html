@@ -22,7 +22,7 @@
           </svg>
         </a>
         <section class="my-2 my-lg-0 user-image">
-          <img src="img/user.png" alt="user profile">
+          <img src="img/user.png">
         </section>
       </nav>
       <section class="breadcrumbs container-md">
@@ -36,7 +36,7 @@
         <section>
             <div class="btn-group btn-group-lg d-flex" role="group">
               <a type="button" class="btn btn-light" href="navigate.html">Start now</a>
-              <!-- <a type="button" class="btn btn-light" id="desktop" href="maps.html">Map</a>  FIX THIS FOR DESKTOP VIEW -->
+              <!-- <a type="button" class="btn btn-light" id="desktop" href="navigate.html">Map</a>  FIX THIS FOR DESKTOP VIEW -->
               <a type="button" class="btn btn-light" href="edit.html">Edit</a>
               <a type="button" class="btn btn-light" href="#">Share</a>
             </div>
@@ -47,79 +47,36 @@
             <a class="nav-item nav-link" href="#details">Details</a>
             <a class="nav-item nav-link" href="#comments">Itinerary</a>
           </nav>
-          <section id="articleData">
-            <section id="description">
-                <h3>
-                  Description
-                </h3>
-                <span>
-                  The kibbutz of Sde Boker is famous as the home of David Ben Gurion, Israel's first Prime 
-                  Minister whose home is now a museum open to the public, and is the feature of a number of 
-                  supporting exhibits in the kibbutz. Sde Boker is located in the center of the Negev Desert 
-                  in southern Israel, a community founded in 1952 by a number of pioneering families who were 
-                  later joined by Ben Gurion after an interesting encounter. Today, visitors from around the 
-                  world visit to learn about the life of Israel's iconic leader.
-                </span>
-                <a href="#">...see more</a>
+
+            <section id="articleData">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img class="d-block w-100" src="../EagleEye/images/metzada.PNG" alt="First slide">
+                      </div>
+                      <div class="carousel-item">
+                        <img class="d-block w-100" src="../EagleEye/images/eingedi.PNG" alt="Second slide">
+                      </div>
+                      <div class="carousel-item">
+                        <img class="d-block w-100" src="../EagleEye/images/deadseamap.PNG" alt="Third slide">
+                      </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
             </section>
-            <section id="details">
-              <h3>
-                Details
-              </h3>
-              <section class="row">
-                <section class="col-md-6">
-                  <h5>
-                    School
-                  </h5>
-                  <span>
-                    Eagle High School
-                  </span>
-                </section>
-                <section class="col-md-6">
-                  <h5>
-                    Kids
-                  </h5>
-                  <span>
-                    49 kids
-                  </span>
-                </section>
-                <section class="col-md-6">
-                  <h5>
-                    Guides
-                  </h5>
-                  <span>
-                    3 guides
-                  </span>
-                </section>
-                <section class="col-md-6">
-                  <h5>
-                    Accessibility
-                  </h5>
-                  <span>
-                    Very Accessible
-                  </span>
-                </section>
-                <section class="col-md-6">
-                  <h5>
-                    Route Includes
-                  </h5>
-                  <ul class="includes">
-                    <li>Animal Zones</li>
-                    <li>Water Experiences</li>
-                    <li>Panoramic Views</li>
-                  </ul>
-                </section>
-                <section class="col-md-6">
-                  <h5>
-                    Route Doesn't Includes
-                  </h5>
-                  <ul class="not-include">
-                    <li>Cell service Everywhere</li>
-                    <li>Climbing Areas</li>
-                  </ul>
-                </section>
-              </section>
-            </section>
+
             <section id="itinerary">
               <h3>Itinerary</h3>
               <section>
@@ -132,7 +89,6 @@
                         </button>
                       </h2>
                     </div>
-                
                     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                       <div class="card-body">
                         Masada is extremely high, and can be ascended on foot by the winding "snake path" or by a cable car 
