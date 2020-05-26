@@ -12,56 +12,54 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Source+Code+Pro&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyTrips</title>
 </head>
 
-<body class="container">
+<body id="mainList">
 
     <header>
-      <nav class="navbar navbar-light bg-light">
+      <section class="navbar navbar-light bg-light">
             <a class="navbar-brand" href="index.html">
-              <img src="../EagleEye/images/logo.png" width="35" height="35" class="d-inline-block align-top" alt="logo" loading="lazy">
+              <img src="images/logo.png" width="35" height="35" class="d-inline-block align-top" alt="logo" loading="lazy">
               Eagle Eye
             </a>
         <section class="my-2 my-lg-0">
-                <a href="myProfile.html" class="profile"></a>
+                <a href="#" class="profile"></a>
         </section>
+      </section>
+      <nav class="navbar navbar-expand-lg navbar-light"> 
+        <a class="navbar-brand" href="#">Menu</a>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Trips</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="edit.html">Add a New Trip</a>
+                  <a class="dropdown-item" href="#">Upcoming Trips</a>
+                  <a class="dropdown-item" href="#">Previous Trips</a>
+              </div>
+            </li>  
+            <a class="nav-item nav-link" href="#">Gallery</a>
+            <a class="nav-item nav-link" href="#">Map</a>
+            <a class="nav-item nav-link" href="#">Settings</a>
+          </div>
+        </div>
       </nav>
     </header>
 
 
-<section class="menuBar">
-
-  <nav class="navbar navbar-expand-lg navbar-light"> 
-    <a class="navbar-brand" href="#">Menu</a>
-    
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Trips</a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="edit.html">Add a New Trip</a>
-              <a class="dropdown-item" href="#">Upcoming Trips</a>
-              <a class="dropdown-item" href="#">Previous Trips</a>
-          </div>
-        </li>  
-        <a class="nav-item nav-link" href="#">Gallery</a>
-        <a class="nav-item nav-link" href="#">Map</a>
-        <a class="nav-item nav-link" href="#">Settings</a>
-      </div>
-    </div>
-  </nav>
-
 </section>
 
-    <main>
+    <main class="container">
         <h2 id="pageTitle">My Trips</h2>
 
         <section class="row row-cols-1 row-cols-md-3">
@@ -69,59 +67,67 @@
                 <div class="card bg-light text-dark">
                     <a href="article.html"><img src="images/sdeBoker.png" class="card-img" alt="Sde Boker"></a>
                     <div class="card-body">
-                        <h5 class="card-title">Sde Boker</h5>
+                        <h5 class="card-title"><a href="article.html">Sde Boker</a></h5>
                         <p class="card-text">128 Trips - 4k Likes & Shares</p>
                         <p class="card-text">A two-day desert hike in the Judean Desert - from Nahal Mishmar Canyon through the desert level to the Arugot River in Nate Ein Gedi</p>
                     </div>
+                    <a href="article.html">
                     <div class="card-img-overlay">
                       <h5 class="card-title">Sde Boker</h5>
                       <p class="card-text">128 Trips - 4k Likes & Shares</p>
                     </div>
+                  </a>
                 </div>
             </section>
 
             <section class="col mb-4">
                 <div class="card bg-light text-dark">
-                    <a href="#"><img src="images/deadSea.png" class="card-img" alt="Dead Sea"></a>
+                    <a href="article.html"><img src="images/deadSea.png" class="card-img" alt="Dead Sea"></a>
                     <div class="card-body">
+                        <h5 class="card-title"><a href="article.html">Dead Sea</a></h5>
+                        <p class="card-text">128 Trips - 4k Likes & Shares</p>
+                        <p class="card-text">A two-day desert hike in the Judean Desert - from Nahal Mishmar Canyon through the desert level to the Arugot River in Nate Ein Gedi</p>
+                    </div>
+                    <a href="article.html">
+                      <div class="card-img-overlay">
                         <h5 class="card-title">Dead Sea</h5>
                         <p class="card-text">128 Trips - 4k Likes & Shares</p>
-                        <p class="card-text">A two-day desert hike in the Judean Desert - from Nahal Mishmar Canyon through the desert level to the Arugot River in Nate Ein Gedi</p>
-                    </div>
-                    <div class="card-img-overlay">
-                      <h5 class="card-title">Dead Sea</h5>
-                      <p class="card-text">128 Trips - 4k Likes & Shares</p>
-                    </div>
+                      </div>
+                    </a>
                 </div>
             </section>
 
             <section class="col mb-4">
                 <div class="card bg-light text-dark">
-                    <a href="#"><img src="images/mitzpeRamon.png" class="card-img" alt="Mitzpe Ramon"></a>
+                    <a href="article.html"><img src="images/mitzpeRamon.png" class="card-img" alt="Mitzpe Ramon"></a>
                     <div class="card-body">
-                        <h5 class="card-title">Mitzpe Ramon</h5>
+                        <h5 class="card-title"><a href="article.html">Mitzpe Ramon</a></h5>
                         <p class="card-text">128 Trips - 4k Likes & Shares</p>
                         <p class="card-text">A two-day desert hike in the Judean Desert - from Nahal Mishmar Canyon through the desert level to the Arugot River in Nate Ein Gedi</p>
                     </div>
-                    <div class="card-img-overlay">
-                      <h5 class="card-title">Mitzpe Ramon</h5>
-                      <p class="card-text">128 Trips - 4k Likes & Shares</p>
-                    </div>
+                    <a href="article.html">
+                      <div class="card-img-overlay">
+                        <h5 class="card-title"><Mitzpe Ramon</h5>
+                        <p class="card-text">128 Trips - 4k Likes & Shares</p>
+                      </div>
+                    </a>
                 </div>
             </section>
 
             <section class="col mb-4">
                 <div class="card bg-light text-dark">
-                    <a href="#"><img src="images/einBokek.png" class="card-img" alt="Ein Bokek"></a>
+                    <a href="article.html"><img src="images/einBokek.png" class="card-img" alt="Ein Bokek"></a>
                     <div class="card-body">
+                        <h5 class="card-title"><a href="article.html">Ein Bokek</a></h5>
+                        <p class="card-text">128 Trips - 4k Likes & Shares</p>
+                        <p class="card-text">A two-day desert hike in the Judean Desert - from Nahal Mishmar Canyon through the desert level to the Arugot River in Nate Ein Gedi</p>
+                    </div>
+                    <a href="article.html">
+                      <div class="card-img-overlay">
                         <h5 class="card-title">Ein Bokek</h5>
                         <p class="card-text">128 Trips - 4k Likes & Shares</p>
-                        <p class="card-text">A two-day desert hike in the Judean Desert - from Nahal Mishmar Canyon through the desert level to the Arugot River in Nate Ein Gedi</p>
-                    </div>
-                    <div class="card-img-overlay">
-                      <h5 class="card-title">Ein Bokek</h5>
-                      <p class="card-text">128 Trips - 4k Likes & Shares</p>
-                    </div>
+                      </div>
+                    </a>
                 </div>
             </section>
 

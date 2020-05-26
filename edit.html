@@ -23,7 +23,7 @@
           </svg>
         </a>
         <section class="my-2 my-lg-0 user-image">
-          <img src="img/user.png">
+          <img src="images/user.png">
         </section>
       </nav>
 
@@ -96,7 +96,7 @@
                   <h5>Route includes:</h5>
                   <section class="includes">
                         <div class="form-group">
-                        <select multiple class="form-control" name="includes">
+                        <select multiple class="form-control" name="includes[]">
                           <option>Animal zone</option>
                           <option>Water experience</option>
                           <option>Panoramic views</option>
@@ -106,24 +106,24 @@
                       </div>
 
                       <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="animal">
-                        <label class="custom-control-label" for="customCheck1">Animal zone</label>
+                        <input type="checkbox" class="custom-control-input" id="animalIncludes" name="includes[]">
+                        <label class="custom-control-label" for="animalIncludes">Animal zone</label>
                       </div>
                       <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="climbing">
-                        <label class="custom-control-label" for="customCheck1">Water experience</label>
+                        <input type="checkbox" class="custom-control-input" id="climbingIncludes" name="includes[]">
+                        <label class="custom-control-label" for="climbingIncludes">Water experience</label>
                       </div>
                       <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="panoramic">
-                        <label class="custom-control-label" for="customCheck1">Panoramic views</label>
+                        <input type="checkbox" class="custom-control-input" id="panoramicIncludes" name="includes[]">
+                        <label class="custom-control-label" for="panoramicIncludes">Panoramic views</label>
                       </div>
                       <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="snow">
-                        <label class="custom-control-label" for="customCheck1">Snow slides</label>
+                        <input type="checkbox" class="custom-control-input" id="snowIncludes" name="includes[]">
+                        <label class="custom-control-label" for="snowIncludes">Snow slides</label>
                       </div>
                       <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="picnic">
-                        <label class="custom-control-label" for="customCheck1">Picnic area</label>
+                        <input type="checkbox" class="custom-control-input" id="picnicIncludes" name="includes[]">
+                        <label class="custom-control-label" for="picnicIncludes">Picnic area</label>
                       </div>
 
                   </section>
@@ -132,7 +132,7 @@
                 <section class="col-md-6">
                   <h5>Route doesn't Include:</h5>
                   <section class="not-includes">
-                    <select multiple class="form-control" name="notIncludes">
+                    <select multiple class="form-control" name="notIncludes[]">
                         <option>Internet everywhere</option>
                         <option>Climbing areas</option>
                         <option>Panoramic views</option>
@@ -140,24 +140,24 @@
                         <option>Picnic area</option>
                       </select>
                       <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="internet">
-                        <label class="custom-control-label" for="customCheck1">Internet everywhere</label>
+                        <input type="checkbox" class="custom-control-input" id="internet" name="notIncludes[]">
+                        <label class="custom-control-label" for="internet">Internet everywhere</label>
                       </div>
                       <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="climbing">
-                        <label class="custom-control-label" for="customCheck1">Climbing areas</label>
+                        <input type="checkbox" class="custom-control-input" id="climbing" name="notIncludes[]">
+                        <label class="custom-control-label" for="climbing">Climbing areas</label>
                       </div>
                       <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="panoramic">
-                        <label class="custom-control-label" for="customCheck1">Panoramic views</label>
+                        <input type="checkbox" class="custom-control-input" id="panoramic" name="notIncludes[]">
+                        <label class="custom-control-label" for="panoramic">Panoramic views</label>
                       </div>
                       <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="snow">
-                        <label class="custom-control-label" for="customCheck1">Snow slides</label>
+                        <input type="checkbox" class="custom-control-input" id="snow" name="notIncludes[]">
+                        <label class="custom-control-label" for="snow">Snow slides</label>
                       </div>
                       <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="picnic">
-                        <label class="custom-control-label" for="customCheck1">Picnic area</label>
+                        <input type="checkbox" class="custom-control-input" id="picnic" name="notIncludes[]">
+                        <label class="custom-control-label" for="picnic">Picnic area</label>
                       </div>
                   </section>
                 </section>
@@ -289,7 +289,7 @@
                     </section>
                     <section class="col-4">
                         <figure class="figure">
-                            <img src="images/maayanGedi.jpeg" class="figure-img img-fluid rounded" alt="maayan gedi">
+                            <img src="images/metzada.PNG" class="figure-img img-fluid rounded" alt="maayan gedi">
                             <figcaption class="figure-caption">Maayan Gedi</figcaption>
                         </figure>
                     </section>
@@ -301,12 +301,6 @@
                     </section>
                 </section>
                 <section class="row">
-                    <section class="col-4">
-                        <figure class="figure">
-                            <img src="images/sdeBoker.jpg" class="figure-img img-fluid rounded" alt="sde boker">
-                            <figcaption class="figure-caption">Sde Boker</figcaption>
-                        </figure>
-                    </section>
                     <section class="col-4">
                         <figure class="figure">
                             <img src="images/deadSea.png" class="figure-img img-fluid rounded" alt="dead sea">

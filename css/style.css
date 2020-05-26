@@ -23,9 +23,12 @@ header{
 
 .profile {
     display: block;
-    background: url("../images/userPic.png") 50%/contain no-repeat;
-    height: 46px;
-    width: 50px;
+    background: url("../images/user.png") 50%/contain no-repeat;
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    border: 2px solid #AAA;
+    margin: 2px;
 }
 
 
@@ -34,7 +37,7 @@ header{
     display: block;
     margin-top: 20px;
     margin-left: 10px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     color:  #454F63;
     font-size: 26px;
 }
@@ -54,6 +57,15 @@ header{
     }
     body .card-img-overlay {
         color: #FFF;
+        background: rgba(0,0,0,0.3);
+        display: flex;
+        justify-content: flex-end;
+        align-items: self-start;
+        flex-flow: column;
+    }
+    .card-title{
+        font-size: 24px;
+        font-weight: 700;
     }
 }
 /* Desktop */
@@ -61,4 +73,8 @@ header{
     body .card-img-overlay {
         display: none;
     }
+}
+
+#mainList header {
+    box-shadow: 2px 2px 12px 0px #AAA;
 }
