@@ -59,6 +59,10 @@ header button {
     justify-content: space-evenly;
 }
 
+#checkedError{
+    visibility:hidden; 
+    color:#d9534f;
+}
 
 /* BOOTSTRAP CHANGE */
 .btn-light {

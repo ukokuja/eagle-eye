@@ -52,3 +52,23 @@ $(document).ready(function () {
         modal.find('.modal-body #timeTo').timepicker('setTime', timeTo)
       })
 })
+
+
+
+
+
+
+function handleData()
+{
+    var form_data = new FormData(document.querySelector("form"));
+    
+    if(!form_data.has("accessability[]")) {
+        document.getElementById("checkedError").style.visibility= "visible";
+      return false;
+    }
+
+    else{
+        document.getElementById("checkedError").style.visibility= "hidden";
+      return true;
+    }    
+}
