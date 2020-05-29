@@ -9,14 +9,14 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/bootstrap-timepicker.min.css">
-    <link rel="stylesheet" href="css/article.css">
+    <link rel="stylesheet" href="includes/bootstrap-timepicker.min.css">
+    <link rel="stylesheet" href="includes/style.css">
     <title>Eagle Eye</title>
   </head>
 
   <body>
 
-    <header>
+    <header class="article">
       <nav class="navbar navbar-dark container-md">
         <a class="navbar-brand" href="article.html">
           <svg class="bi bi-arrow-left" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -24,23 +24,23 @@
             <path fill-rule="evenodd" d="M2.5 8a.5.5 0 01.5-.5h10.5a.5.5 0 010 1H3a.5.5 0 01-.5-.5z" clip-rule="evenodd"/></svg>
         </a>
         <section class="my-2 my-lg-0 user-image">
-          <img src="images/user.png">
+          <img src="includes/images/user.png">
         </section>
       </nav>
 
       <section class="breadcrumbs container-md">
         <h2>Sde Boker</h2>
-        <h1>Edit trip</h1>
+        <h1>Edit Trip</h1>
       </section>
 
       <button type="button" class="btn btn-secondary btn-lg" data-toggle="modal" data-target="#exampleModal">Change picture</button>
 
     </header>
 
-    <main>
+    <main class="article">
     
       <form onsubmit="return handleData()" action="#" method="GET">
-      <div class="container-md" id='wrapper'>
+      <div class="container-md" id="wrapper">
       <section>
 
           <section id="articleData">
@@ -266,6 +266,7 @@
                 <button class="btn btn-info btn-lg" type="submit">Save</button>
             </section>
           </section>
+
           <footer id="footer">
             <nav class="navbar fixed-bottom navbar-light bg-dark">
                 <section class="container">
@@ -274,15 +275,15 @@
                         <button class="btn btn-info my-2 my-sm-0" type="submit">Save</button>
                     </form>
 
-
-
-
                 </section>
             </nav>
           </footer>
+
         </section>
       </div>
     </main>
+
+
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -296,19 +297,19 @@
                 <section class="row">
                     <section class="col-4">
                         <figure class="figure">
-                            <img src="images/einBokek.png" class="figure-img img-fluid rounded" alt="ein bokek">
+                            <img src="includes/images/einBokek.png" class="figure-img img-fluid rounded" alt="ein bokek">
                             <figcaption class="figure-caption">Ein Bokek</figcaption>
                         </figure>
                     </section>
                     <section class="col-4">
                         <figure class="figure">
-                            <img src="images/metzada.PNG" class="figure-img img-fluid rounded" alt="maayan gedi">
+                            <img src="includes/images/deadSea.png" class="figure-img img-fluid rounded" alt="maayan gedi">
                             <figcaption class="figure-caption">Maayan Gedi</figcaption>
                         </figure>
                     </section>
                     <section class="col-4">
                         <figure class="figure">
-                            <img src="images/mitzpeRamon.png" class="figure-img img-fluid rounded" alt="mitze ramon">
+                            <img src="includes/images/mitzpeRamon.png" class="figure-img img-fluid rounded" alt="mitze ramon">
                             <figcaption class="figure-caption">Mitzpe Ramon</figcaption>
                         </figure>
                     </section>
@@ -316,13 +317,13 @@
                 <section class="row">
                     <section class="col-4">
                         <figure class="figure">
-                            <img src="images/deadSea.png" class="figure-img img-fluid rounded" alt="dead sea">
+                            <img src="includes/images/deadSea.png" class="figure-img img-fluid rounded" alt="dead sea">
                             <figcaption class="figure-caption">Dead Sea</figcaption>
                         </figure>
                     </section>
                     <section class="col-4">
                         <figure class="figure">
-                            <img src="images/sdeBoker.png" class="figure-img img-fluid rounded" alt="sde boker">
+                            <img src="includes/images/sdeBoker.png" class="figure-img img-fluid rounded" alt="sde boker">
                             <figcaption class="figure-caption">Sde Boker</figcaption>
                         </figure>
                     </section>
@@ -335,7 +336,7 @@
           </div>
         </div>
       </div>
-      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -410,8 +411,8 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <script src="js/bootstrap-timepicker.min.js"></script>
-    <script src="js/article.js"></script>
+    <script src="includes/bootstrap-timepicker.min.js"></script>
+    <script src="includes/script.js"></script>
     
   </body>
 </html>

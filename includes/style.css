@@ -1,21 +1,238 @@
-* 
-{ 
-    margin: 0; 
+*
+{
+    margin: 0;
     padding: 0;
 }
-html {
-    height: 100%;
-}
 
-header, 
+header,
 main,
-section,  
-nav, 
-div, 
+section,
+nav,
+div,
 aside,
 footer
 {
     display: block;
+}
+
+body {
+    font-family: 'Open sans', sans-serif;
+}
+
+header.index{
+    width: 100%;
+    padding-top: 1px;
+    background-color: white;
+}
+
+.profile {
+    display: block;
+    background: url("../includes/images/user.png") 50%/contain no-repeat;
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    border: 2px solid #AAA;
+    margin: 2px;
+}
+
+
+#pageTitle {
+    /* position: absolute; */
+    display: block;
+    margin-top: 20px;
+    margin-left: 10px;
+    font-family: 'Open Sans', sans-serif;
+    color:  #454F63;
+    font-size: 26px;
+}
+
+.menuBar{
+    margin-top: 10px;
+}
+
+header.index .navbar{
+    background-color: #e3f2fd;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+    body .card-body {
+        display: none;
+    }
+    body .card-img-overlay {
+        color: #FFF;
+        background: rgba(0,0,0,0.3);
+        display: flex;
+        justify-content: flex-end;
+        align-items: self-start;
+        flex-flow: column;
+    }
+    .card-title{
+        font-size: 24px;
+        font-weight: 700;
+    }
+}
+/* Desktop */
+@media (min-width: 700px) {
+    body .card-img-overlay {
+        display: none;
+    }
+}
+
+#mainList header.index {
+    box-shadow: 2px 2px 12px 0px #AAA;
+}
+
+
+
+
+
+/* ARTICLE and EDIT CSS */
+
+header.article {
+    background: url('../includes/images/sdeBoker.jpg') 50%/cover no-repeat;
+    height: 300px;
+    position: relative;
+}
+header.article h2 {
+    color: #EEE;
+    font-weight: 200;
+}
+header.article h1 {
+    color: #EEE;
+    font-weight: 700;
+}
+header.article button {
+    position: absolute;
+    top: 100px;
+    left: calc(50% - 76px);
+}
+.user-image img{
+    max-height: 30px;
+    width: auto;
+    border-radius: 100%;
+    border: 2px solid #AAA;
+    margin: 2px;
+}
+
+main.article #wrapper {
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    background: #FFF;
+    position: relative;
+    top: -100px;
+    box-shadow: 1px 1px 3px 0px #AAA;
+}
+
+.article .navbar, .breadcrumbs {
+    padding: .5rem 1rem;
+}
+
+.destination-image {
+    height: 200px;
+    background: 50%/cover no-repeat;
+}
+
+main.article #wrapper > section > nav {
+    position: sticky;
+    background: #FFF;
+    top: 0;
+    padding: 10px;
+    z-index: 10;
+}
+main.article #wrapper > section > div{
+    margin: 10px 0;
+}
+main.article #wrapper > section > section:nth-child(2) > div {
+    justify-content: space-evenly;
+}
+
+#checkedError{
+    visibility:hidden; 
+    color:#d9534f;
+}
+
+/* BOOTSTRAP CHANGE */
+.btn-light {
+    background-color: #E6E6E6;
+}
+main.article #wrapper > section:nth-child(2) {
+    margin: 50px 0 20px;
+}
+
+#articleData > section{ 
+    margin: 20px 0;
+}
+
+
+#articleData > section { 
+    border-radius: 4px;
+}
+
+#articleData ul{
+    list-style: none;
+    padding: 0;
+}
+#articleData .not-include li {
+    background: url('../includes/images/x.svg') 0/30px no-repeat;
+}
+#articleData .includes li {
+    background: url('../includes/images/check.svg') 0/30px no-repeat;
+}
+
+#articleData ul li {
+    padding-left: 40px;
+}
+#details > section > section {
+    margin: 15px 0px;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    main.article #wrapper > section > nav {
+        display: none
+    }
+    #description > a {
+        display: none;
+    }
+    .includes .custom-checkbox, .not-includes .custom-checkbox {
+        display: none;
+    }
+}
+
+@media (max-width: 992px) {
+    #articleData > section > h3 {
+        font-size: 20px;
+        font-weight: bold;
+        display: none
+    }
+    main.article #wrapper {
+        box-shadow: none;
+    }
+    .includes select, .not-includes select {
+        display: none;
+    }
+    
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}
+
+
+
+
+
+
+
+/* NAVIGATE CSS */
+
+html {
+    height: 100%;
 }
 
 body#navigate {
@@ -175,7 +392,7 @@ main#navigate {
 #navigate aside > section:first-child {
     width: 15vh;
     height: 15vh;
-    background: url('../images/user.png') 50%/cover;
+    background: url('../includes/images/user.png') 50%/cover;
     justify-content: center;
     align-content: center;
     margin: 20px auto;
