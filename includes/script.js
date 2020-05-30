@@ -37,9 +37,11 @@ $(document).ready(function () {
             }
         }
     });
+
     $("#title").change(function (e) {
         $(".breadcrumbs h2").html(this.value);
     })
+
     $('#editModal').on('show.bs.modal', function (event) {
         var button = $(event.relatedTarget) // Button that triggered the modal
         var timeFrom = button.data('timeFrom') // Extract info from data-* attributes
@@ -157,7 +159,7 @@ $(document).ready(() => {
 
 function setDrone (map, pos) {
     var myIcon = L.icon({
-        iconUrl: '/images/logo.png',
+        iconUrl: 'includes/images/drone.png',
         iconSize: [50, 50],
     });
     return L.marker(pos, {icon: myIcon}).addTo(map);
