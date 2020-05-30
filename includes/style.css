@@ -408,7 +408,7 @@ main#navigate {
 }
 
 @media (max-width: 414px) {
-    body #navigate aside {
+    body#navigate aside {
         width: 0;
         opacity: 0;
     }
