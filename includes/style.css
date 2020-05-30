@@ -14,12 +14,16 @@ footer
 {
     display: block;
 }
+html{
+    height: 100%;
+}
 
 body {
     font-family: 'Open sans', sans-serif;
+    height: 100%;
 }
 
-header.index{
+#index header{
     width: 100%;
     padding-top: 1px;
     background-color: white;
@@ -50,7 +54,7 @@ header.index{
     margin-top: 10px;
 }
 
-header.index .navbar{
+#index header .navbar{
     background-color: #e3f2fd;
 }
 
@@ -79,7 +83,7 @@ header.index .navbar{
     }
 }
 
-#mainList header.index {
+#mainList header{
     box-shadow: 2px 2px 12px 0px #AAA;
 }
 
@@ -89,20 +93,20 @@ header.index .navbar{
 
 /* ARTICLE and EDIT CSS */
 
-header.article {
+#articleBody header{
     background: url('../includes/images/sdeBoker.jpg') 50%/cover no-repeat;
     height: 300px;
     position: relative;
 }
-header.article h2 {
+#articleBody header h2 {
     color: #EEE;
     font-weight: 200;
 }
-header.article h1 {
+#articleBody header h1 {
     color: #EEE;
     font-weight: 700;
 }
-header.article button {
+#articleBody header button {
     position: absolute;
     top: 100px;
     left: calc(50% - 76px);
@@ -115,7 +119,11 @@ header.article button {
     margin: 2px;
 }
 
-main.article #wrapper {
+#articleBody .navbar, .breadcrumbs {
+    padding: .5rem 1rem;
+}
+
+#articleBody main #wrapper {
     padding: .5rem 1rem;
     border-radius: 10px;
     background: #FFF;
@@ -124,26 +132,23 @@ main.article #wrapper {
     box-shadow: 1px 1px 3px 0px #AAA;
 }
 
-.article .navbar, .breadcrumbs {
-    padding: .5rem 1rem;
-}
 
 .destination-image {
     height: 200px;
     background: 50%/cover no-repeat;
 }
 
-main.article #wrapper > section > nav {
+#articleBody main #wrapper > section > nav {
     position: sticky;
     background: #FFF;
     top: 0;
     padding: 10px;
     z-index: 10;
 }
-main.article #wrapper > section > div{
+#articleBody main #wrapper > section > div{
     margin: 10px 0;
 }
-main.article #wrapper > section > section:nth-child(2) > div {
+#articleBody main #wrapper > section > section:nth-child(2) > div {
     justify-content: space-evenly;
 }
 
@@ -156,7 +161,7 @@ main.article #wrapper > section > section:nth-child(2) > div {
 .btn-light {
     background-color: #E6E6E6;
 }
-main.article #wrapper > section:nth-child(2) {
+#articleBody main #wrapper > section:nth-child(2) {
     margin: 50px 0 20px;
 }
 
@@ -195,7 +200,7 @@ main.article #wrapper > section:nth-child(2) {
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-    main.article #wrapper > section > nav {
+    #articleBody main #wrapper > section > nav {
         display: none
     }
     #description > a {
@@ -212,7 +217,7 @@ main.article #wrapper > section:nth-child(2) {
         font-weight: bold;
         display: none
     }
-    main.article #wrapper {
+    #articleBody main #wrapper {
         box-shadow: none;
     }
     .includes select, .not-includes select {
@@ -231,15 +236,7 @@ main.article #wrapper > section:nth-child(2) {
 
 /* NAVIGATE CSS */
 
-html {
-    height: 100%;
-}
-
-body#navigate {
-    font-family: 'Open sans', sans-serif;
-    height: 100%;
-}
-header#navigate {
+#navigate header{
     z-index: 10;
 }
 #navigate header > section {
@@ -263,7 +260,12 @@ main#navigate {
     z-index: 5;
 }
 
-
+#navigate main{
+    display: flex;
+    flex-flow: row nowrap;
+    height: 100%;
+    z-index: 5;
+}
 
 #indicator {
     z-index: 10;
@@ -283,13 +285,11 @@ main#navigate {
     right: 0;
     line-height: 56px;
 }
-
 #indicator span{
     display: block;
     text-align: center;
     font-family: 'Bebas Neue', 'Open Sans', Arial, Helvetica, sans-serif;
 }
-
 #indicator span:first-of-type {
     font-size: 23px;
 }
@@ -307,39 +307,31 @@ main#navigate {
     -o-transition: transform .3s linear;
     -ms-transition: transform .3s linear;
     transition: transform .3s linear;
-  }
-
-  .leaflet-marker-pane > *:nth-of-type(2) {
+}
+.leaflet-marker-pane > *:nth-of-type(2) {
     -webkit-transition: transform .5s linear;
     -moz-transition: transform .5s linear;
     -o-transition: transform .5s linear;
     -ms-transition: transform .5s linear;
     transition: transform .5s linear;
-  }
-
-  .leaflet-marker-pane > *:nth-of-type(3) {
+}
+.leaflet-marker-pane > *:nth-of-type(3) {
     -webkit-transition: transform .4s ease-in;
     -moz-transition: transform .4s ease-in;
     -o-transition: transform .4s ease-in;
     -ms-transition: transform .4s ease-in;
     transition: transform .4s ease-in;
-  }
+}
 
-  .leaflet-marker-pane > *:nth-of-type(4) {
+.leaflet-marker-pane > *:nth-of-type(4) {
     -webkit-transition: transform .5s linear;
     -moz-transition: transform .5s linear;
     -o-transition: transform .5s linear;
     -ms-transition: transform .5s linear;
     transition: transform .5s linear;
-  }
-
-
-#navigate main{
-    display: flex;
-    flex-flow: row nowrap;
-    height: 100%;
-    z-index: 5;
 }
+
+
 
 #map {
     height: 100vh;
@@ -408,11 +400,11 @@ main#navigate {
 }
 
 @media (max-width: 414px) {
-    body#navigate aside {
+    #navigate:not(.isHamburgerOpen) aside {
         width: 0;
         opacity: 0;
     }
-    body.isHamburgerOpen #navigate aside {
+    body.isHamburgerOpen aside {
         width: 100%;
         flex-grow: 1;
         opacity: 1;

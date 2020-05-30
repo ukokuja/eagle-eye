@@ -175,7 +175,7 @@ main#navigate {
 #navigate aside > section:first-child {
     width: 15vh;
     height: 15vh;
-    background: url('../images/user.png') 50%/cover;
+    background: url('../includes/images/user.png') 50%/cover;
     justify-content: center;
     align-content: center;
     margin: 20px auto;
