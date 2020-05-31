@@ -23,6 +23,10 @@ body {
     height: 100%;
 }
 
+#logo {
+    padding-left: 50px;
+    background: url('../images/logo.png') 0 50%/contain no-repeat;
+}
 #index header{
     width: 100%;
     padding-top: 1px;
@@ -31,7 +35,7 @@ body {
 
 .profile {
     display: block;
-    background: url("../includes/images/user.png") 50%/contain no-repeat;
+    background: url("../images/user.png") 50%/contain no-repeat;
     height: 30px;
     width: 30px;
     border-radius: 100%;
@@ -94,7 +98,7 @@ body {
 /* ARTICLE and EDIT CSS */
 
 #articleBody header{
-    background: url('../includes/images/sdeBoker.jpg') 50%/cover no-repeat;
+    background: url('../images/sdeBoker.jpg') 50%/cover no-repeat;
     height: 300px;
     position: relative;
 }
@@ -152,29 +156,36 @@ body {
     justify-content: space-evenly;
 }
 
-#checkedError{
-    visibility:hidden; 
-    color:#d9534f;
-}
-#articleBody #description:not(.open) > span {
+#articleBody #description:not(.open) > span:first-of-type {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
   }
-  
-  #articleBody #description > a:first-of-type{
+  #description > span.expand {
+      color: blue;
+  }
+  #description > span.expand:hover {
+      text-decoration: underline;
+  }
+  #articleBody #description > span.expand:nth-of-type(2){
     display: block;
   }
-  #articleBody  #description > a:nth-of-type(2){
+  #articleBody  #description > span.expand:nth-of-type(3){
     display: none;
   }
-  #articleBody #description.open > a:first-of-type{
+  #articleBody #description.open > span.expand:nth-of-type(2){
     display: none;
   }
-  #articleBody #description.open > a:nth-of-type(2){
+  #articleBody #description.open > span.expand:nth-of-type(3){
     display: block;
+  }
+
+  @media (min-width: 414px) {
+    body#articleBody #description > span.expand:nth-of-type(2) {
+        display: none;
+    }
   }
 
 /* BOOTSTRAP CHANGE */
@@ -199,10 +210,10 @@ body {
     padding: 0;
 }
 #articleData .not-include li {
-    background: url('../includes/images/x.svg') 0/30px no-repeat;
+    background: url('../images/x.svg') 0/30px no-repeat;
 }
 #articleData .includes li {
-    background: url('../includes/images/check.svg') 0/30px no-repeat;
+    background: url('../images/check.svg') 0/30px no-repeat;
 }
 
 #articleData ul li {
@@ -416,7 +427,7 @@ main#navigate {
 #navigate aside > section:first-child {
     width: 15vh;
     height: 15vh;
-    background: url('../includes/images/user.png') 50%/cover;
+    background: url('../images/user.png') 50%/cover;
     justify-content: center;
     align-content: center;
     margin: 20px auto;

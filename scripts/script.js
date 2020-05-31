@@ -15,7 +15,7 @@ function initArticle() {
     initSeeMore();
 }
 function initSeeMore () {
-    $('#description a').click(function(element) {
+    $('#description .expand').click(function(element) {
         $(this).parent().toggleClass('open');
     })
 }
@@ -144,7 +144,7 @@ function initNavigator() {
 }
 function setDrone(map, pos) {
     var myIcon = L.icon({
-        iconUrl: 'includes/images/drone.png',
+        iconUrl: '../images/drone.png',
         iconSize: [50, 50],
     });
     return L.marker(pos, { icon: myIcon }).addTo(map);
