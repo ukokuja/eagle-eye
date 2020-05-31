@@ -27,7 +27,7 @@ body {
     padding-left: 50px;
     background: url('../images/logo.png') 0 50%/contain no-repeat;
 }
-#index header{
+#mainTripsContainer header{
     width: 100%;
     padding-top: 1px;
     background-color: white;
@@ -58,7 +58,7 @@ body {
     margin-top: 10px;
 }
 
-#index header .navbar{
+#mainTripsContainer header .navbar{
     background-color: #e3f2fd;
 }
 
@@ -97,20 +97,20 @@ body {
 
 /* ARTICLE and EDIT CSS */
 
-#articleBody header{
+#mainArticleLayout header{
     background: url('../images/sdeBoker.jpg') 50%/cover no-repeat;
     height: 300px;
     position: relative;
 }
-#articleBody header h2 {
+#mainArticleLayout header h2 {
     color: #EEE;
     font-weight: 200;
 }
-#articleBody header h1 {
+#mainArticleLayout header h1 {
     color: #EEE;
     font-weight: 700;
 }
-#articleBody header button {
+#mainArticleLayout header button {
     position: absolute;
     top: 100px;
     left: calc(50% - 87.5px);
@@ -123,11 +123,11 @@ body {
     margin: 2px;
 }
 
-#articleBody .navbar, .breadcrumbs {
+#mainArticleLayout .navbar, .breadcrumbs {
     padding: .5rem 1rem;
 }
 
-#articleBody main #wrapper {
+#mainArticleLayout main #wrapper {
     padding: .5rem 1rem;
     border-radius: 10px;
     background: #FFF;
@@ -142,21 +142,21 @@ body {
     background: 50%/cover no-repeat;
 }
 
-#articleBody main #wrapper > section > nav {
+#mainArticleLayout main #wrapper > section > nav {
     position: sticky;
     background: #FFF;
     top: 0;
     padding: 10px;
     z-index: 10;
 }
-#articleBody main #wrapper > section > div{
+#mainArticleLayout main #wrapper > section > div{
     margin: 10px 0;
 }
-#articleBody main #wrapper > section > section:nth-child(2) > div {
+#mainArticleLayout main #wrapper > section > section:nth-child(2) > div {
     justify-content: space-evenly;
 }
 
-#articleBody #description:not(.open) > span:first-of-type {
+#mainArticleLayout #description:not(.open) > span:first-of-type {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -169,21 +169,21 @@ body {
   #description > span.expand:hover {
       text-decoration: underline;
   }
-  #articleBody #description > span.expand:nth-of-type(2){
+  #mainArticleLayout #description > span.expand:nth-of-type(2){
     display: block;
   }
-  #articleBody  #description > span.expand:nth-of-type(3){
+  #mainArticleLayout  #description > span.expand:nth-of-type(3){
     display: none;
   }
-  #articleBody #description.open > span.expand:nth-of-type(2){
+  #mainArticleLayout #description.open > span.expand:nth-of-type(2){
     display: none;
   }
-  #articleBody #description.open > span.expand:nth-of-type(3){
+  #mainArticleLayout #description.open > span.expand:nth-of-type(3){
     display: block;
   }
 
   @media (min-width: 414px) {
-    body#articleBody #description > span.expand:nth-of-type(2) {
+    body#mainArticleLayout #description > span.expand:nth-of-type(2) {
         display: none;
     }
     #articleData > a {
@@ -191,7 +191,7 @@ body {
     }
   }
   @media (max-width: 414px) {
-    #articleBody header button {
+    #mainArticleLayout header button {
         display: none;
     }
   }
@@ -200,7 +200,7 @@ body {
 .btn-light {
     background-color: #E6E6E6;
 }
-#articleBody main #wrapper > section:nth-child(2) {
+#mainArticleLayout main #wrapper > section:nth-child(2) {
     margin: 50px 0 20px;
 }
 
@@ -239,7 +239,7 @@ body {
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-    #articleBody main #wrapper > section > nav {
+    #mainArticleLayout main #wrapper > section > nav {
         display: none
     }
     #description > a {
@@ -256,7 +256,7 @@ body {
         font-weight: bold;
         display: none
     }
-    #articleBody main #wrapper {
+    #mainArticleLayout main #wrapper {
         box-shadow: none;
     }
     .includes select, .not-includes select {
@@ -286,10 +286,10 @@ body {
 
 /* NAVIGATE CSS */
 
-#navigate header{
+#navigationLayout header{
     z-index: 10;
 }
-#navigate header > section {
+#navigationLayout header > section {
     width: 50px;
     height: 50px;
     background: #FFF;
@@ -302,7 +302,7 @@ body {
     top: 30px;
 }
 
-main#navigate { 
+main#navigationLayout { 
     display: flex;
     flex-flow: column;
     justify-content: flex-end;
@@ -310,7 +310,7 @@ main#navigate {
     z-index: 5;
 }
 
-#navigate main{
+#navigationLayout main{
     display: flex;
     flex-flow: row nowrap;
     height: 100%;
@@ -391,14 +391,14 @@ main#navigate {
     background: #333;
 }
 
-#navigate footer {
+#navigationLayout footer {
     z-index: 1000;
     position: absolute;
     bottom: 0;
     width: 100%;
 }
 
-#navigate aside {
+#navigationLayout aside {
     z-index: 10;
     width: 400px;
     transition: width 0.2s ease-in;
@@ -408,7 +408,7 @@ main#navigate {
     box-shadow: 2px 2px 12px 0px #000;
     opacity: 1;
 }
-#navigate aside ul {
+#navigationLayout aside ul {
     list-style-type: none;
     align-content: center;
     display: flex;
@@ -416,17 +416,17 @@ main#navigate {
     flex-flow: column nowrap;
     width: 100%;
 }
-#navigate aside li {
+#navigationLayout aside li {
     border-top: 1px solid #DFDFDF;
 }
-#navigate aside li a {
+#navigationLayout aside li a {
     text-decoration: none;
     color: #000;
  }
- #navigate aside li a:hover {
+ #navigationLayout aside li a:hover {
      font-weight: 600;
  }
-#navigate aside li i {
+#navigationLayout aside li i {
     width: 50px;
     height: 50px;
     border-radius: 100%;
@@ -435,7 +435,7 @@ main#navigate {
     text-align: center;
     margin: 20px;
 }
-#navigate aside > section:first-child {
+#navigationLayout aside > section:first-child {
     width: 15vh;
     height: 15vh;
     background: url('../images/user.png') 50%/cover;
@@ -444,17 +444,17 @@ main#navigate {
     margin: 20px auto;
     box-shadow: 2px 2px 12px 0px #AAA;
 }
-#navigate aside > section:nth-child(2) {
+#navigationLayout aside > section:nth-child(2) {
     border-top: 1px solid #DDD;
     margin: 20px;
 }
 
-#navigate header > section {
+#navigationLayout header > section {
     display: none;
 }
 
 @media (max-width: 414px) {
-    #navigate:not(.isHamburgerOpen) aside {
+    #navigationLayout:not(.isHamburgerOpen) aside {
         width: 0;
         opacity: 0;
     }
@@ -466,7 +466,7 @@ main#navigate {
     #indicator span:nth-of-type(2) {
         display: none;
     }
-    #navigate:not(.isHamburgerOpen) header > section {
+    #navigationLayout:not(.isHamburgerOpen) header > section {
         display: flex;
     }
     
@@ -479,7 +479,7 @@ main#navigate {
   }
 
   @media (min-width: 414px) {
-    #navigate footer {
+    #navigationLayout footer {
         width: 80%;
         left: 20%;
     }
