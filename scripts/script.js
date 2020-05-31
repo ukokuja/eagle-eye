@@ -152,7 +152,7 @@ function initNavigator() {
 }
 function setDrone(map, pos) {
     var myIcon = L.icon({
-        iconUrl: '../images/drone.png',
+        iconUrl: 'images/drone.png',
         iconSize: [50, 50],
     });
     return L.marker(pos, { icon: myIcon }).addTo(map);
@@ -200,13 +200,18 @@ function addMapWithStyle() {
         center: [31.4664, 35.387983],
         zoom: 5,
         preferCanvas: true,
-        zoomControl: false
-    });
-    // couche OpenStreetMap
-    var Stadia_AlidadeSmoothDark = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
+        zoomControl: false,
         maxZoom: 20
     });
-    map.addLayer(Stadia_AlidadeSmoothDark);
+    // couche OpenStreetMap
+    var Jawg_Dark = L.tileLayer('https://{s}.tile.jawg.io/jawg-dark/{z}/{x}/{y}{r}.png?access-token={accessToken}', {
+        attribution: '<a href="http://jawg.io" title="Tiles Courtesy of Jawg Maps" target="_blank">&copy; <b>Jawg</b>Maps</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        minZoom: 0,
+        maxZoom: 22,
+        subdomains: 'abcd',
+        accessToken: 'R8kO0sUL739jOGWGaqGxQ5B9zaioziEMlP0RKMX7ZCIQ80LCmSmmQTuMqUFCs104'
+    });
+    map.addLayer(Jawg_Dark);
 
     map.setView(new L.LatLng(31.465718, 35.3510653), 17);
     
