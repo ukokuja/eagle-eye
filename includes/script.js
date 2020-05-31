@@ -230,3 +230,4 @@ function initHamburguer() {
         $('body').removeClass('isHamburgerOpen');
     })
 }
+
