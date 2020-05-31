@@ -21,7 +21,7 @@
   </head>
   
 <body id="articleBody">
-  <header id="temp" class="article">
+  <header class="article">
     <nav class="navbar navbar-dark container-md">
       <a class="navbar-brand" href="article.html">
         <svg class="bi bi-arrow-left" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
@@ -50,15 +50,16 @@
   <main class="article">
 
     <form id="editForm" method="GET" class="needs-validation" novalidate action="http://html5-book.co.il/teach/forms/get_form2.php">
-      <div class="container-md" id="wrapper">
-        <section>
-
+      <section class="container-md" id="wrapper">
           <section id="articleData">
-
+            <a href="#" class="btn btn-link btn-sm" data-toggle="modal" data-target="#imagesModal">Change
+              picture
+            </a>
+            <input type="hidden" value="images/sdeBoker.jpg" name="image">
             <section id="description">
               <h3>Title</h3>
               <div class="form-group">
-                <input type="text" class="form-control" id="title" placeholder="Ein Gedi" value="Sde Boker" required>
+                <input type="text" class="form-control" name="title" id="title" placeholder="Ein Gedi" value="Sde Boker" required>
                 <div class="invalid-feedback">
                   Please indicate trip title
                 </div>
@@ -66,7 +67,7 @@
 
               <h3>Description</h3>
               <div class="form-group">
-                <textarea class="form-control no-validate"
+                <textarea class="form-control no-validate" name="description"
                   rows="3">Ein Gedi, just aside the Dead Sea in the Judean Desert, not too far from Jerusalem, is one of Israel's premier hiking spots, featuring spectacular beauty, varied landscapes, and botanical gardens. There's no doubt that Ein Gedi Nature Reserve is one of the most beautiful places in Israel. While it is located close to Jerusalem, it feels worlds away, Ein Gedi is, of course one of the most popular escape spots for locals and tourists who take advantage of the reserve, botanical gardens, and the Dead Sea.</textarea>
               </div>
             </section>
@@ -79,7 +80,7 @@
                 <section class="col-md-6">
                   <h5>School</h5>
                   <div class="form-group">
-                    <input type="text" class="form-control" placeholder="School Name" value="Eagle High School"
+                    <input type="text" name="schoolName" class="form-control" placeholder="School Name" value="Eagle High School"
                       pattern="((\s+)?\w+\s+\w+\s?)+" required>
                       <div class="invalid-feedback">
                         Please indicate school name
@@ -90,7 +91,7 @@
                 <section class="col-md-6">
                   <h5>Kids</h5>
                   <div class="input-group">
-                    <input type="number" class="form-control" placeholder="10" value="49" min="1" required>
+                    <input type="number" class="form-control" name="kidsAmount" placeholder="10" value="49" min="1" required>
                     <div class="input-group-append">
                       <span class="input-group-text">Kids</span>
                     </div>
@@ -103,7 +104,7 @@
                 <section class="col-md-6">
                   <h5>Guides</h5>
                   <div class="input-group">
-                    <input type="number" class="form-control" placeholder="2" value="3" min="1" required>
+                    <input type="number" name="guidesAmount" class="form-control" placeholder="2" value="3" min="1" required>
                     <div class="input-group-append">
                       <span class="input-group-text">Guides</span>
                     </div>
@@ -116,9 +117,9 @@
                 <section class="col-md-6">
                   <h5>Accessability</h5>
                   <section>
-                    <input type="radio" name="accessability[]" value="very" checked> <span>High accessability</span><br>
-                    <input type="radio" name="accessability[]" value="medium"> <span>Medium accessability</span><br>
-                    <input type="radio" name="accessability[]" value="low"> <span>Low accessability</span>
+                    <input type="radio" name="accessability" value="very" checked> <span>High accessability</span><br>
+                    <input type="radio" name="accessability" value="medium"> <span>Medium accessability</span><br>
+                    <input type="radio" name="accessability" value="low"> <span>Low accessability</span>
                   </section>
                 </section>
 
@@ -209,6 +210,9 @@
                   <div class="card border-light mb-3">
                     <div class="card-header" id="headingOne">
                       <h2 class="mb-0">
+                        <input type="hidden" value="0800" name="itinerary[0][start]">
+                        <input type="hidden" value="1000" name="itinerary[0][end]">
+                        <input type="hidden" value="Masada" name="itinerary[0][place]">
                         <button class="btn btn-link text-left" type="button" data-toggle="collapse"
                           data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                           08:00 - 10:00 - Masada
@@ -241,17 +245,20 @@
                   <div class="card border-light mb-3">
                     <div class="card-header" id="headingTwo">
                       <h2 class="mb-0">
+                        <input type="hidden" value="1100" name="itinerary[1][start]">
+                        <input type="hidden" value="1400" name="itinerary[1][end]">
+                        <input type="hidden" value="Ein Gedi" name="itinerary[1][place]">
                         <button class="btn btn-link text-left collapsed" type="button" data-toggle="collapse"
                           data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                           11:00 - 14:00 - Ein Gedi
                         </button>
                         <button class="btn btn-link" type="button" data-toggle="modal" data-target="#editModal"
                           data-time-from="11:00" data-time-to="14:00" data-place="Ein gedi" aria-expanded="true"
-                          aria-controls="collapseOne">
+                          aria-controls="collapseTwo">
                           <i class="fa fa-edit"></i>
                         </button>
-                        <button class="btn btn-link" type="button" data-target="#collapseOne" aria-expanded="true"
-                          aria-controls="collapseOne">
+                        <button class="btn btn-link" type="button" data-target="#collapseTwo" aria-expanded="true"
+                          aria-controls="collapseTwo">
                           <i class="far fa-trash-alt"></i>
                         </button>
                       </h2>
@@ -270,17 +277,20 @@
                   <div class="card border-light mb-3">
                     <div class="card-header" id="headingThree">
                       <h2 class="mb-0">
+                        <input type="hidden" value="1600" name="itinerary[2][start]">
+                        <input type="hidden" value="1900" name="itinerary[2][end]">
+                        <input type="hidden" value="Dead Sea" name="itinerary[2][place]">
                         <button class="btn btn-link text-left collapsed" type="button" data-toggle="collapse"
                           data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                           16:00 - 19:00 Dead Sea
                         </button>
                         <button class="btn btn-link" type="button" data-toggle="modal" data-target="#editModal"
                           data-time-from="16:00" data-time-to="19:00" data-place="Dead sea" aria-expanded="true"
-                          aria-controls="collapseOne">
+                          aria-controls="collapseThree">
                           <i class="fa fa-edit"></i>
                         </button>
-                        <button class="btn btn-link" type="button" data-target="#collapseOne" aria-expanded="true"
-                          aria-controls="collapseOne">
+                        <button class="btn btn-link" type="button" data-target="#collapseThree" aria-expanded="true"
+                          aria-controls="collapseThree">
                           <i class="far fa-trash-alt"></i>
                         </button>
                       </h2>
@@ -301,7 +311,7 @@
                     <div class="card-header" id="headingNew">
                       <h2 class="mb-0">
                         <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="modal"
-                          data-target="#editModal" aria-expanded="false" aria-controls="collapseNew">
+                          data-target="#editModal" aria-expanded="false">
                           Click here to add a new stop
                         </button>
                       </h2>
@@ -323,9 +333,7 @@
               </section>
             </nav>
           </footer>
-
         </section>
-      </div>
       </form>
   </main>
 
@@ -344,7 +352,6 @@
             <section class="col-4">
               <figure class="figure">
                 <img
-                onclick="document.getElementById('temp').style.backgroundImage='url(images/makteshRamon.jpg)'" 
                 src="images/makteshRamon.jpg" 
                 class="figure-img img-fluid rounded" 
                 alt="ein bokek">
@@ -354,7 +361,6 @@
             <section class="col-4">
               <figure class="figure">
                 <img
-                onclick="document.getElementById('temp').style.backgroundImage='url(images/einGedi.jpg)'"
                 src="images/einGedi.jpg" 
                 class="figure-img img-fluid rounded" 
                 alt="maayan gedi">
@@ -364,7 +370,6 @@
             <section class="col-4">
               <figure class="figure">
                 <img
-                onclick="document.getElementById('temp').style.backgroundImage='url(images/yehudaDesert.jpg)'" 
                 src="images/yehudaDesert.jpg" 
                 class="figure-img img-fluid rounded" 
                 alt="mitze ramon">
@@ -376,7 +381,6 @@
             <section class="col-4">
               <figure class="figure">
                 <img 
-                onclick="document.getElementById('temp').style.backgroundImage='url(images/deadSeaBig.jpg)'" 
                 src="images/deadSeaBig.jpg" 
                 class="figure-img img-fluid rounded" 
                 alt="dead sea">
@@ -386,7 +390,6 @@
             <section class="col-4">
               <figure class="figure">
                 <img
-                onclick="document.getElementById('temp').style.backgroundImage='url(images/masada.jpg)'" 
                 src="images/masada.jpg" 
                 class="figure-img img-fluid rounded" 
                 alt="sde boker">
@@ -408,7 +411,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title"></h5>
+          <h5 class="modal-title">Choose a new stop</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>

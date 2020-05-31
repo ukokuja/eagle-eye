@@ -113,7 +113,7 @@ body {
 #articleBody header button {
     position: absolute;
     top: 100px;
-    left: calc(50% - 76px);
+    left: calc(50% - 87.5px);
 }
 .user-image img{
     max-height: 30px;
@@ -184,6 +184,14 @@ body {
 
   @media (min-width: 414px) {
     body#articleBody #description > span.expand:nth-of-type(2) {
+        display: none;
+    }
+    #articleData > a {
+        display: none;
+    }
+  }
+  @media (max-width: 414px) {
+    #articleBody header button {
         display: none;
     }
   }
@@ -414,6 +422,9 @@ main#navigate {
 #navigate aside li a {
     text-decoration: none;
     color: #000;
+ }
+ #navigate aside li a:hover {
+     font-weight: 600;
  }
 #navigate aside li i {
     width: 50px;

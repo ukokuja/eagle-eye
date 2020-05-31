@@ -59,11 +59,19 @@ function initEditor() {
     initFooterInteraction();
 }
 function initModalImages() {
+    var originalImage = $('header').css('background-image');
+    var selectedImage = originalImage;
     $("#imagesModal figure").click(function () {
         $("#imagesModal figure").each(function () {
             $(this).removeClass('selected');
         })
+        selectedImage = $(this).children('img').attr('src');
         $(this).addClass('selected');
+    })
+
+    $("#imagesModal .modal-footer button:last-of-type").click(function () {
+        $("input[name='image']").val(selectedImage);
+        $('header').css('background-image', 'url(' + selectedImage + ')');
     })
 }
 function initModalSchedule() {
