@@ -20,7 +20,7 @@
   </head>
   
 <body id="articleBody">
-  <header class="article">
+  <header id="temp" class="article">
     <nav class="navbar navbar-dark container-md">
       <a class="navbar-brand" href="article.html">
         <svg class="bi bi-arrow-left" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
@@ -342,19 +342,31 @@
           <section class="row">
             <section class="col-4">
               <figure class="figure">
-                <img src="includes/images/einBokek.png" class="figure-img img-fluid rounded" alt="ein bokek">
+                <img
+                onclick="document.getElementById('temp').style.backgroundImage='url(includes/images/einBokek.png)'" 
+                src="includes/images/einBokek.png" 
+                class="figure-img img-fluid rounded" 
+                alt="ein bokek">
                 <figcaption class="figure-caption">Ein Bokek</figcaption>
               </figure>
             </section>
             <section class="col-4">
               <figure class="figure">
-                <img src="includes/images/deadSea.png" class="figure-img img-fluid rounded" alt="maayan gedi">
+                <img
+                onclick="document.getElementById('temp').style.backgroundImage='url(includes/images/deadSea.png)'" 
+                src="includes/images/deadSea.png" 
+                class="figure-img img-fluid rounded" 
+                alt="maayan gedi">
                 <figcaption class="figure-caption">Maayan Gedi</figcaption>
               </figure>
             </section>
             <section class="col-4">
               <figure class="figure">
-                <img src="includes/images/mitzpeRamon.png" class="figure-img img-fluid rounded" alt="mitze ramon">
+                <img
+                onclick="document.getElementById('temp').style.backgroundImage='url(includes/images/mitzpeRamon.png)'" 
+                src="includes/images/mitzpeRamon.png" 
+                class="figure-img img-fluid rounded" 
+                alt="mitze ramon">
                 <figcaption class="figure-caption">Mitzpe Ramon</figcaption>
               </figure>
             </section>
@@ -362,13 +374,21 @@
           <section class="row">
             <section class="col-4">
               <figure class="figure">
-                <img src="includes/images/deadSea.png" class="figure-img img-fluid rounded" alt="dead sea">
+                <img 
+                onclick="document.getElementById('temp').style.backgroundImage='url(includes/images/deadSea.png)'" 
+                src="includes/images/deadSea.png" 
+                class="figure-img img-fluid rounded" 
+                alt="dead sea">
                 <figcaption class="figure-caption">Dead Sea</figcaption>
               </figure>
             </section>
             <section class="col-4">
               <figure class="figure">
-                <img src="includes/images/sdeBoker.png" class="figure-img img-fluid rounded" alt="sde boker">
+                <img
+                onclick="document.getElementById('temp').style.backgroundImage='url(includes/images/sdeBoker.png)'" 
+                src="includes/images/sdeBoker.png" 
+                class="figure-img img-fluid rounded" 
+                alt="sde boker">
                 <figcaption class="figure-caption">Sde Boker</figcaption>
               </figure>
             </section>
@@ -376,7 +396,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
         </div>
       </div>
     </div>
