@@ -64,7 +64,7 @@ body {
 
 /* Mobile */
 @media (max-width: 700px) {
-    body .card-body {
+    body#mainTripsContainer .card-body {
         display: none;
     }
     body .card-img-overlay {
